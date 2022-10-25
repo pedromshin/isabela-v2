@@ -84,6 +84,30 @@ span {
     margin: 50px auto;
     max-width: 80%;
     text-align: center;
+    font-size: 25px;
+}
+
+.main > .content {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.main > .content > .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px
+}
+
+.main > .content > .image-container > .photo-title {
+    font-size: 24px;
+    text-align: center;
+}
+
+.footer {
+    margin-top: 60px;
 }
 
 .footer > .social-buttons {
@@ -223,6 +247,12 @@ span {
     
 }
 
+@media screen and (min-width: 768px) {
+    .main > .content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     #drawer-toggle-label {
       display: none;
@@ -252,8 +282,8 @@ span {
         font-size: 44px;
     }
 
-    .main > .photo {
-        width: 30%;
+    .main > .content {
+        grid-template-columns: 1fr 1fr 1fr;
     }
   }
   
